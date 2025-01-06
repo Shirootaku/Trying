@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fcfbf8;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .button-container {
+            text-align: center;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #d5e2b6;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ffab91;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button id="clickButton" onclick="handleClick()">Click me!</button>
+<div class="image-container">
+<img src="Photo.gif" alt="Interactive Image" width="200">
+</div>
+    </div>
+
+    <script>
+        let clickCount = 0;
+
+        function handleClick() {
+            clickCount++;
+            const button = document.getElementById('clickButton');
+
+            if (clickCount === 1) {
+                button.innerText = 'Click again!';
+            } else if (clickCount === 2) {
+                button.innerText = 'One more time!';
+            } else if (clickCount === 3) {
+                window.location.href = 'birthday-card.html';
+            }
+        }
+    </script>
+<P>
+
+</body>
+</html>
